@@ -1,6 +1,6 @@
 # Ansible-Integration-in-Jenkins
 
--create and configure a dedicated server for Jenkins
+- create and configure a dedicated server for Jenkins
 
 I have created a droplet in Digital Ocean to be a dedicated server for Jenkins:
 
@@ -109,7 +109,30 @@ The ansible-server-key is used to connect to the Ansible server from Jenkins and
 
 - so the Jenkins configuration will do the following:
 a. Connect to the remote Ansible Control Node server
+![Screenshot 2024-11-05 at 11 08 31](https://github.com/user-attachments/assets/3e47d93c-0157-409e-963a-9bb25eee97a2)
+
+
 b. Copy Ansible playbook and configuration files to the remote ANSIBLE Control Node server
+![Screenshot 2024-11-05 at 11 06 08](https://github.com/user-attachments/assets/3ba0f19d-599c-4210-a8f2-2a1e112021c2)
+
+The playbook and related ansible files are prepared in the ansible folder of the repo.
+
 c. Copy the ssh keys for the Ansible Managed Node servers to the Ansible Control Node server
+
+![Screenshot 2024-11-05 at 11 08 31](https://github.com/user-attachments/assets/3e47d93c-0157-409e-963a-9bb25eee97a2)
+
 d. Install Ansible, Python3, Boto3 on the Ansible Control Node server
-e. With everything installed and copied to the remote Ansible Control Node server, execute the playbook remotely on that Control Node that will configure the 2EC2 Managed Nodes
+
+![Screenshot 2024-11-05 at 11 04 40](https://github.com/user-attachments/assets/a6ba6c3f-01c1-4b67-b027-7b7e0f069645)
+
+e. With everything installed and copied to the remote Ansible Control Node server, execute the playbook remotely on that Control Node that will configure the 2 EC2 Managed Nodes
+
+![Screenshot 2024-11-05 at 11 07 50](https://github.com/user-attachments/assets/423d6ae6-dea9-4bae-a95a-0bcb8abb6fb5)
+
+
+# Results
+
+Here is a snapshot of the succesful pipeline in Jenkins:
+
+![Screenshot 2024-11-05 at 11 09 11](https://github.com/user-attachments/assets/94f06177-15cb-4379-9e32-15254bb50f2b)
+
