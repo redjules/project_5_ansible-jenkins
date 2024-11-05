@@ -103,6 +103,8 @@ In Private Key section, I have copied the private key from AWS:
 
 <img width="940" alt="Screenshot 2024-11-04 at 23 29 47" src="https://github.com/user-attachments/assets/be1d5395-2658-4224-ba03-5b1eedbe15df">
 
+
+
 The ansible-server-key is used to connect to the Ansible server from Jenkins and this ec2-server-key is going to copy the contents of whatever this private key contains to the Ansible server.
 
 - so the Jenkins configuration will do the following:
